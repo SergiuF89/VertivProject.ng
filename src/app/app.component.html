@@ -12,16 +12,19 @@
       <input type="datetime-local" id="dateTime" [(ngModel)]="selectedDate" name="dateTime" required step="1"/>
     </div>
 
-    <button type="submit">Generate OTP</button>
+    <button [disabled]="remainingSeconds > 0" type="submit">Generate OTP</button>
   </form>
 
-  <div *ngIf="otpResponse">
-    <h3>OTP: {{ otpResponse.otp }}</h3>
-    <p>Remaining Time: {{ remainingSeconds }} seconds</p>
+  <div *ngIf="otpResponse.otpCode">
+    <p *ngIf="otpRequestDuplication" class="otp-request-validation" [ngClass]="!otpRequestDuplication ? 'valid' : 'invalid'">
+      Request has already been sent
+    </p>
+    <h3 class="otp-code" (click)="copyOtpCode(otpResponse.otpCode)" [attr.title]="'Click to copy'">OTP: {{ otpResponse.otpCode }}</h3>
+    <p>Code valid for: {{ remainingSeconds }} seconds</p>
   </div>
 
   <!-- OTP Validation Section -->
-  <div *ngIf="otpResponse">
+  <div *ngIf="otpResponse.otpCode">
     <div class="otp-validation">
       <label for="enteredOtp">Enter OTP</label>
       <input type="text" id="enteredOtp" [(ngModel)]="enteredOtp" name="enteredOtp" required />

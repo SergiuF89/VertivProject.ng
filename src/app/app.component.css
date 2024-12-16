@@ -5,27 +5,27 @@
     border: 1px solid #ddd;
     border-radius: 8px;
   }
-  
+
   h1 {
     text-align: center;
   }
-  
+
   form div {
     margin-bottom: 10px;
   }
-  
+
   form label {
     display: block;
     font-weight: bold;
   }
-  
+
   form input {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
     box-sizing: border-box;
   }
-  
+
   button {
     width: 100%;
     padding: 10px;
@@ -36,27 +36,27 @@
     border-radius: 5px;
     cursor: pointer;
   }
-  
+
   button:hover {
     background-color: #45a049;
   }
-  
+
   h3 {
     color: #333;
     font-size: 20px;
   }
-  
+
   p {
     font-size: 18px;
     color: #333;
   }
-  
+
   /* OTP Validation Styles */
   .valid {
     color: green;
     font-weight: bold;
   }
-  
+
   .invalid {
     color: red;
     font-weight: bold;
@@ -69,7 +69,19 @@
   #enteredOtp{
     margin-left: 5px;
   }
-  
+
   .otp-response-validation{
     text-align: center;
+  }
+
+  .otp-request-validation,
+  .otp-request-validation p {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .otp-code{
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
   }
