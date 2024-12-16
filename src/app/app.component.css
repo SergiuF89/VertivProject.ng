@@ -1,0 +1,75 @@
+.container {
+    width: 25%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  form div {
+    margin-bottom: 10px;
+  }
+  
+  form label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  h3 {
+    color: #333;
+    font-size: 20px;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* OTP Validation Styles */
+  .valid {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .invalid {
+    color: red;
+    font-weight: bold;
+  }
+
+  .otp-validation{
+    margin-bottom: 10px;
+  }
+
+  #enteredOtp{
+    margin-left: 5px;
+  }
+  
+  .otp-response-validation{
+    text-align: center;
+  }
